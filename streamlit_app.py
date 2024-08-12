@@ -1,19 +1,22 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+import time
 
 st.title("🎈 My new app")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
-@st.cache_resource
-def create_list():
-    l = [1, 2, 3]
-    return l
+# @st.cache_resource
+# def create_list():
+#     l = [1, 2, 3]
+#     return l
 
-l = create_list()
-first_list_value = l[0]
-l[0] = first_list_value + 1
+# l = create_list()
+# first_list_value = l[0]
+# l[0] = first_list_value + 1
 
-st.write("l[0] is:", l[0])
+# st.write("l[0] is:", l[0])
 df = pd.DataFrame({
     'first-column':[1,2,3,4],
     'second-column':[10,20,30,40]
